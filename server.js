@@ -29,9 +29,7 @@ app.set('view engine', 'ejs')
 
 
 
-app.get('/',(req, res)=>{
-    res.render('home');
-})
+
 
 app.use('/api/files', require('./routes/files'));
 app.use('/files',require('./routes/show')); 
