@@ -36,7 +36,7 @@ router.post('/send', async (req, res) => {
       return res.status(422).send({ error: 'All fields are required except expiry.'});
   }
   // Get data from db 
-  try {
+  
     const file = await File.findOne({ uuid: uuid });
     if(file.sender) {
       return res.status(422).send({ error: 'Email already sent once.'});
@@ -57,14 +57,10 @@ router.post('/send', async (req, res) => {
                 size: parseInt(file.size/1000) + ' KB',
                 expires: '24 hours'
             })
-    }).then(() => {
+    })
       return res.json({success: true});
-    }).catch(err => {
-      return res.status(500).json({error: 'Error in email sending.'});
-    });
-} catch(err) {
-  return res.status(500).send({ error: 'Something went wrong.'});
-}
+  
+
 
 });
 
