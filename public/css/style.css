@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color: #edf5fe;
+    --main-bg-color: #DE354C;
     --light-blue: #03a9f4;
     --dark-blue: #028bca;
   }
@@ -29,6 +29,8 @@ section.download {
     box-shadow: 0px 20px 20px 0px #00000017;
     padding: 2rem;
     text-align: center;
+    background-color:rgb(154, 255, 71);
+    
 }
 .download__icon {
     height: 8rem;
@@ -51,6 +53,25 @@ section.download {
     transition: all .3s ease-in-out;
   }
 
+
+  .button_slide {
+    color:black;
+    border: 2px solid rgb(216, 2, 134);
+    border-radius: 0px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #D80286;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+  .slide_down:hover {
+    box-shadow: inset 0 100px 0 0 #D80286;
+  }
   .send-btn-container a:hover {
       background: var(--dark-blue);
   }
